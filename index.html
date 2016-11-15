@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplayer</title>
+    <link rel="icon" type="image/png" href="images/CandyIcon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="description" content="Race your friends to the finish line climbing on huge pieces of candy. Available Now for the HTC Vive.">
+    <meta name="keywords" content="vr, virtual reality, climb, climbing, candy, race, racing">
+    <script>
+    $(document).ready(function(){
+ 
+     $.ajax({type: "POST",
+            url: "https://hooks.slack.com/services/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",
+            data: "payload=" + JSON.stringify({ 
+                "channel": "#multiplayernotify", 
+                "username": "webhookbot", 
+                "text": "Some one is in sweetescape.", 
+               "icon_emoji": ":ghost:" }),
+             dataType: 'json',
+             success:function(result){
+          console.log("It Worked");
+     }});
+});
+    </script>
+  </head>
+
+  <body>
+  
+  </body>
+</html>
